@@ -3,16 +3,17 @@
 ## 📝 Descripción general del sistema
 
 Se solicita crear un sistema para la empresa SpeedFast, la cual es una empresa de reparto a domicilio que ofrece tres tipos de servicios. Entre ellos la entrega de "Comida", que corresponde a compras en restaurantes, además la entrega de "Encomiendas", correspondiente a todo tipo de documentos o paquetes y finalmente "Compras Express", que se encarga del reparto de compras en supermercado y farmacia.
-Para el desarrolo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando abstracción, polimorfismo, sobrecarga y sobrescritura de métodos.
+Para el desarrollo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando abstracción, polimorfismo, sobrecarga y sobrescritura de métodos.
 
-En esta nueva entrega de la semana 2, se modifican y agregan conceptos de abstración en clase principal `Pedido` y un metodo que sobreescriben las clases que lo heredan. 
+En esta nueva entrega de la semana 2, se modifican y agregan conceptos de abstraction en clase principal `Pedido` y un metodo que sobreescriben las clases que lo heredan. 
 
 ---
 ## 🧱 Estructura general del proyecto
 
 ```
-📦 SpeedFast-S2/
+📦 SpeedFast/
 ┣ 📂 .idea/
+┣ 📂 img/
 ┣ 📂 src/main/java/cl/speedFast
 ┃ ┣ 📂 model/
 ┃ ┃ ┣ 📊 Pedido.java		            #Clase abstracta base con información general para herencia y método abstracto.
@@ -22,7 +23,7 @@ En esta nueva entrega de la semana 2, se modifican y agregan conceptos de abstra
 ┃ ┣ 📂 ui/
 ┃ ┃ ┣ 📊 Main.java		                #Punto de entrada y ejecución principal (Main.java).
 ┃ 📜 README.md
-┗ 📜 SpeedFast-S1.iml
+┗ 📜 SpeedFast.iml
 
 ```
 ---
@@ -50,15 +51,15 @@ Para trabajar correctamente con los recursos de este repositorio, asegúrate de 
 
 - clonar el repositorio de github
 ```bash
-git clone https://github.com/matisuarezm/SpeedFast-S1.git
+git clone https://github.com/matisuarezm/SpeedFast.git
 ```
 - Abre el proyecto en IntelliJ IDEA.
 - Abre la clase `Main.java` del paquete `ui`
 - Puedes ejecutar el proyecto.
 
-	> Nota: Al ejecutar la clase Main.java se mostrarán los resultados por la consola como muestra la imagen.
+	> Nota: Al ejecutar la clase Main.java se mostrarán los resultados por la consola, tal como se ve en la imagen.
 
-    ![Salida por Consola](/img/imagen.png)
+    ![Salida por Consola](img/imagen.png)
 
 ---
 
