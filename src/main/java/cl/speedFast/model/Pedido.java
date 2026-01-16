@@ -58,8 +58,6 @@ public abstract class Pedido {
         System.out.println("Pedido" + getTipoPedido() + " #" + getIdPedido());
         System.out.println("Dirección: " + getDireccionEntrega());
         System.out.println("Distancia: " + getDistanciaKm() + "Km");
-        calcularTiempoEntrega(); //Polimorfismo al llamar método internamente.
-        System.out.println();
     }
 
     public abstract void calcularTiempoEntrega();

@@ -9,16 +9,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pedido[] pedidos = {
-                new PedidoComida("PC001","Avenida Concepción 1234","Comida",5.1),
-                new PedidoEncomienda("PE002", "Los Alamos 186", "Encomienda",3.6),
-                new PedidoExpress("PX003", "Pasaje San Ambrosio 291", "Express",5.2)
-        };
+        Pedido p1 = new PedidoComida("PC001","Avenida Concepción 1234","Comida",7.1);
+        Pedido p2 = new PedidoEncomienda("PE002", "Los Alamos 186", "Encomienda",4.6);
+        Pedido p3 = new PedidoExpress("PX003", "Pasaje San Ambrosio 291", "Express",6.0);
 
         System.out.println("======......LISTADO DE ENVÍOS......======");
-        for (Pedido p : pedidos){
-            p.mostrarResumen();
-        }
+
+        p1.mostrarResumen();
+        p1.calcularTiempoEntrega();
+        System.out.println();
+
+        p2.mostrarResumen();
+        p2.calcularTiempoEntrega();
+        System.out.println();
+
+        p3.mostrarResumen();
+        p3.calcularTiempoEntrega();
+        System.out.println();
 
     }
 }
