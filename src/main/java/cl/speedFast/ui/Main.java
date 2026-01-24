@@ -1,31 +1,46 @@
 package main.java.cl.speedFast.ui;
 
+import main.java.cl.speedFast.Interfaces.Despachable;
 import main.java.cl.speedFast.model.Pedido;
 import main.java.cl.speedFast.model.PedidoComida;
 import main.java.cl.speedFast.model.PedidoEncomienda;
 import main.java.cl.speedFast.model.PedidoExpress;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Pedido p1 = new PedidoComida("PC001","Avenida Concepción 1234","Comida",7.1);
-        Pedido p2 = new PedidoEncomienda("PE002", "Los Alamos 186", "Encomienda",4.6);
-        Pedido p3 = new PedidoExpress("PX003", "Pasaje San Ambrosio 291", "Express",6.0);
+        List<String> historialEntrega = new ArrayList<>();
 
-        System.out.println("======......LISTADO DE ENVÍOS......======");
-
+        PedidoComida p1 = new PedidoComida("PC001","Avenida Concepción 1234","Comida",7.1);
         p1.mostrarResumen();
+        p1.asignarRepartidor("Felipe");
         p1.calcularTiempoEntrega();
-        System.out.println();
+        p1.despachar();
+        historialEntrega.addAll(p1.verHistorial());
 
+
+        PedidoEncomienda p2 = new PedidoEncomienda("PE002", "Los Alamos 186", "Encomienda",4.6);
         p2.mostrarResumen();
+        p2.asignarRepartidor("Gustavo");
         p2.calcularTiempoEntrega();
-        System.out.println();
+        p2.despachar();
+        historialEntrega.addAll(p2.verHistorial());
 
+
+        PedidoExpress p3 = new PedidoExpress("PX003", "Pasaje San Ambrosio 291", "Express",0.5);
         p3.mostrarResumen();
+        p3.asignarRepartidor("Matias");
         p3.calcularTiempoEntrega();
-        System.out.println();
+        p3.cancelar();
 
+
+        System.out.println("\n======......Historial......======");
+        for (String evento : historialEntrega){
+            System.out.println("- " + evento);
+        }
     }
 }

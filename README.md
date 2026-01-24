@@ -1,11 +1,11 @@
-# 📘 Proyecto: SpeedFast - Semana 2
+# 📘 Proyecto: SpeedFast - Semana 3
 
 ## 📝 Descripción general del sistema
 
 Se solicita crear un sistema para la empresa SpeedFast, la cual es una empresa de reparto a domicilio que ofrece tres tipos de servicios. Entre ellos la entrega de "Comida", que corresponde a compras en restaurantes, además la entrega de "Encomiendas", correspondiente a todo tipo de documentos o paquetes y finalmente "Compras Express", que se encarga del reparto de compras en supermercado y farmacia.
 Para el desarrollo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando abstracción, polimorfismo, sobrecarga y sobrescritura de métodos.
 
-En esta nueva entrega de la semana 2, se modifican y agregan conceptos de abstraction en clase principal `Pedido` y un metodo que sobreescriben las clases que lo heredan. 
+En esta nueva entrega de la semana 3, Creamos interfaces para aplicar reglas de negocio particulares.
 
 ---
 ## 🧱 Estructura general del proyecto

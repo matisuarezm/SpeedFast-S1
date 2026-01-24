@@ -1,6 +1,12 @@
 package main.java.cl.speedFast.model;
 
-public class PedidoExpress extends Pedido{
+import main.java.cl.speedFast.Interfaces.Cancelable;
+import main.java.cl.speedFast.Interfaces.Despachable;
+import main.java.cl.speedFast.Interfaces.Rastreable;
+
+import java.util.List;
+
+public class PedidoExpress extends Pedido implements Despachable, Cancelable, Rastreable {
 
     public PedidoExpress(String idPedido, String direccionEntrega, String tipoPedido, Double distanciaKm) {
         super(idPedido, direccionEntrega, tipoPedido, distanciaKm);
@@ -9,15 +15,13 @@ public class PedidoExpress extends Pedido{
     @Override
     public void asignarRepartidor(){
         System.out.println("\n[Pedido Express]");
-        System.out.println("Asignando repartidor...");
-        System.out.println("-> El repartidor más cercano con disponibilidad inmediata encontrado.");
-        System.out.println("-> Pedido asignado");
+        System.out.println("Pedido #" + getIdPedido());
     }
 
     @Override
     public void asignarRepartidor(String nombreRepartidor) {
-        asignarRepartidor();
-        System.out.println("-> Pedido en camino - entregado por: " + nombreRepartidor);
+        setRepartidor(nombreRepartidor);
+        System.out.println("Repartidor asignado: " + nombreRepartidor);
     }
 
     @Override
@@ -27,5 +31,23 @@ public class PedidoExpress extends Pedido{
             tiempoEntrega += 5;
         }
         System.out.println("Tiempo estimado de entrega: " + tiempoEntrega + " minutos");
+    }
+
+    @Override
+    public void despachar() {
+        System.out.println("PedidoExpress despachado correctamente.");
+        registrarEvento("PedidoExpress #" + getIdPedido() + " - entregado por " + getRepartidor());
+    }
+
+    @Override
+    public void cancelar() {
+        System.out.println("\n[Pedido Express]");
+        System.out.println("Cancelando PedidoExpress #" + getIdPedido() + "...");
+        System.out.println("Su pedido fue cancelado con éxito.");
+    }
+
+    @Override
+    public List<String> verHistorial() {
+        return getHistorial();
     }
 }

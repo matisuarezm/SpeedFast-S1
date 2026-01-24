@@ -1,11 +1,17 @@
 package main.java.cl.speedFast.model;
 
-public abstract class Pedido {
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Pedido{
 
     private String idPedido;
     private String direccionEntrega;
     private String tipoPedido;
     private double distanciaKm;
+    private String repartidor;
+
+    private List<String> historial = new ArrayList<>();
 
     public Pedido(String idPedido, String direccionEntrega, String tipoPedido, double distanciaKm){
         this.idPedido = idPedido;
@@ -26,8 +32,16 @@ public abstract class Pedido {
         return tipoPedido;
     }
 
-    public Double getDistanciaKm(){
+    public double getDistanciaKm(){
         return distanciaKm;
+    }
+
+    public String getRepartidor(){
+        return repartidor;
+    }
+
+    public List<String> getHistorial(){
+        return new ArrayList<>(historial);
     }
 
     public void setIdPedido(String idPedido) {
@@ -46,21 +60,31 @@ public abstract class Pedido {
         this.distanciaKm = distanciaKm;
     }
 
+    public void setRepartidor(String repartidor){
+        this.repartidor = repartidor;
+    }
+
     public void asignarRepartidor(){
         System.out.println("El pedido fue asignado exitosamente a un repartido");
     }
 
     public void asignarRepartidor(String nombreRepartidor){
+        this.repartidor = nombreRepartidor;
         System.out.println("El pedido fue asignado exitosamente al repartido: " + nombreRepartidor);
     }
 
     public void mostrarResumen(){
-        System.out.println("Pedido" + getTipoPedido() + " #" + getIdPedido());
+        System.out.println("\n[Pedido " + getTipoPedido() + "]");
+        System.out.println("Pedido #" + getIdPedido());
         System.out.println("Dirección: " + getDireccionEntrega());
-        System.out.println("Distancia: " + getDistanciaKm() + "Km");
+        System.out.println("Distancia: " + getDistanciaKm() + " Km");
     }
 
     public abstract void calcularTiempoEntrega();
+
+    public void registrarEvento(String evento){
+        historial.add(evento);
+    }
 
     @Override
     public String toString(){
