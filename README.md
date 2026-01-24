@@ -15,13 +15,17 @@ En esta nueva entrega de la semana 3, Creamos interfaces para aplicar reglas de 
 ┣ 📂 .idea/
 ┣ 📂 img/
 ┣ 📂 src/main/java/cl/speedFast
+┃ ┣ 📂 Interfaces/
+┃ ┃ ┣ 📊 Cancelable.java		     #Interfaz para cancelar pedidos.
+┃ ┃ ┣ 📊 Despachable.java		     #Interfaz para despachar y registrar evento
+┃ ┃ ┣ 📊 Rastreable.java		     #Interfaz como lista que guarda los eventos realizados
 ┃ ┣ 📂 model/
-┃ ┃ ┣ 📊 Pedido.java		            #Clase abstracta base con información general para herencia y método abstracto.
-┃ ┃ ┣ 📊 PedidoComida.java		        #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
-┃ ┃ ┣ 📊 PedidoEncomienda.java		    #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
-┃ ┃ ┣ 📊 PedidoExpress.java		        #Clase heredada de Pedido, con lógica propia y definición de metodo abstracto.
+┃ ┃ ┣ 📊 Pedido.java		             #Clase abstracta base con información general para herencia y método abstracto.
+┃ ┃ ┣ 📊 PedidoComida.java		     #Clase heredada de Pedido e implementacion de interfaces.
+┃ ┃ ┣ 📊 PedidoEncomienda.java		     #Clase heredada de Pedido e implementacion de interfaces.
+┃ ┃ ┣ 📊 PedidoExpress.java		     #Clase heredada de Pedido e implementacion de interfaces.
 ┃ ┣ 📂 ui/
-┃ ┃ ┣ 📊 Main.java		                #Punto de entrada y ejecución principal (Main.java).
+┃ ┃ ┣ 📊 Main.java		             #Punto de entrada y ejecución principal (Main.java).
 ┃ 📜 README.md
 ┗ 📜 SpeedFast.iml
 
