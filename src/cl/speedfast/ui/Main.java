@@ -1,10 +1,8 @@
-package main.java.cl.speedFast.ui;
+package cl.speedfast.ui;
 
-import main.java.cl.speedFast.Interfaces.Despachable;
-import main.java.cl.speedFast.model.Pedido;
-import main.java.cl.speedFast.model.PedidoComida;
-import main.java.cl.speedFast.model.PedidoEncomienda;
-import main.java.cl.speedFast.model.PedidoExpress;
+import cl.speedfast.model.PedidoComida;
+import cl.speedfast.model.PedidoEncomienda;
+import cl.speedfast.model.PedidoExpress;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +40,7 @@ public class Main {
         for (String evento : historialEntrega){
             System.out.println("- " + evento);
         }
+
+
     }
 }

@@ -1,4 +1,4 @@
-package main.java.cl.speedFast.Interfaces;
+package cl.speedfast.Interfaces;
 
 import java.util.List;
 

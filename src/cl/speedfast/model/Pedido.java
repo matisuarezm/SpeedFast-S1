@@ -1,4 +1,4 @@
-package main.java.cl.speedFast.model;
+package cl.speedfast.model;
 
 import java.util.ArrayList;
 import java.util.List;

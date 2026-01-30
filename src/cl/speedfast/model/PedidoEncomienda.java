@@ -1,8 +1,8 @@
-package main.java.cl.speedFast.model;
+package cl.speedfast.model;
 
-import main.java.cl.speedFast.Interfaces.Cancelable;
-import main.java.cl.speedFast.Interfaces.Despachable;
-import main.java.cl.speedFast.Interfaces.Rastreable;
+import cl.speedfast.Interfaces.Cancelable;
+import cl.speedfast.Interfaces.Despachable;
+import cl.speedfast.Interfaces.Rastreable;
 
 import java.util.List;
 
