@@ -1,9 +1,13 @@
 package cl.speedfast.model;
 
+import cl.speedfast.Interfaces.Cancelable;
+import cl.speedfast.Interfaces.Despachable;
+import cl.speedfast.Interfaces.Rastreable;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Pedido{
+public abstract class Pedido implements Despachable, Cancelable, Rastreable {
 
     private String idPedido;
     private String direccionEntrega;
@@ -12,6 +16,7 @@ public abstract class Pedido{
     private String repartidor;
 
     private List<String> historial = new ArrayList<>();
+    private EstadoPedido estadoPedido = EstadoPedido.PENDIENTE;
 
     public Pedido(String idPedido, String direccionEntrega, String tipoPedido, double distanciaKm){
         this.idPedido = idPedido;
@@ -44,6 +49,10 @@ public abstract class Pedido{
         return new ArrayList<>(historial);
     }
 
+    public EstadoPedido getEstadoPedido(){
+        return estadoPedido;
+    }
+
     public void setIdPedido(String idPedido) {
         this.idPedido = idPedido;
     }
@@ -62,6 +71,10 @@ public abstract class Pedido{
 
     public void setRepartidor(String repartidor){
         this.repartidor = repartidor;
+    }
+
+    public void setEstadoPedido(EstadoPedido estadoPedido) {
+        this.estadoPedido = estadoPedido;
     }
 
     public void asignarRepartidor(){

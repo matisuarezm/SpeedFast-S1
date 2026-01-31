@@ -1,11 +1,12 @@
-# 📘 Proyecto: SpeedFast - Semana 3
+# 📘 Proyecto: SpeedFast - Semana 4
 
 ## 📝 Descripción general del sistema
 
 Se solicita crear un sistema para la empresa SpeedFast, la cual es una empresa de reparto a domicilio que ofrece tres tipos de servicios. Entre ellos la entrega de "Comida", que corresponde a compras en restaurantes, además la entrega de "Encomiendas", correspondiente a todo tipo de documentos o paquetes y finalmente "Compras Express", que se encarga del reparto de compras en supermercado y farmacia.
 Para el desarrollo se utiliza JAVA como lenguaje de programación y se implementa una jerarquía de clases aplicando abstracción, polimorfismo, sobrecarga y sobrescritura de métodos.
 
-En esta nueva entrega de la semana 3, Creamos interfaces para aplicar reglas de negocio particulares.
+Semana 3, Creamos interfaces para aplicar reglas de negocio particulares.
+Semana 4, Implementamos una clase Repartidor e implementa Runnable para simular la entrega de pedidos en hilos separados.
 
 ---
 ## 🧱 Estructura general del proyecto

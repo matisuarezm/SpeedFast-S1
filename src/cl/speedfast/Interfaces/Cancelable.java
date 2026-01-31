@@ -2,5 +2,5 @@ package cl.speedfast.Interfaces;
 
 public interface Cancelable {
 
-    public void cancelar();
+    boolean cancelar(String motivoCancelacion);
 }
