@@ -15,16 +15,18 @@ Semana 4, Implementamos una clase Repartidor e implementa Runnable para simular 
 📦 SpeedFast/
 ┣ 📂 .idea/
 ┣ 📂 img/
-┣ 📂 src/main/java/cl/speedFast
+┣ 📂 src/cl/speedFast
 ┃ ┣ 📂 Interfaces/
 ┃ ┃ ┣ 📊 Cancelable.java		     #Interfaz para cancelar pedidos.
 ┃ ┃ ┣ 📊 Despachable.java		     #Interfaz para despachar y registrar evento
 ┃ ┃ ┣ 📊 Rastreable.java		     #Interfaz como lista que guarda los eventos realizados
 ┃ ┣ 📂 model/
+┃ ┃ ┣ 📊 EstadoPedido.java                  #Enum con estados para los pedidos..
 ┃ ┃ ┣ 📊 Pedido.java		             #Clase abstracta base con información general para herencia y método abstracto.
 ┃ ┃ ┣ 📊 PedidoComida.java		     #Clase heredada de Pedido e implementacion de interfaces.
 ┃ ┃ ┣ 📊 PedidoEncomienda.java		     #Clase heredada de Pedido e implementacion de interfaces.
 ┃ ┃ ┣ 📊 PedidoExpress.java		     #Clase heredada de Pedido e implementacion de interfaces.
+┃ ┃ ┣ 📊 PedidoExpress.java		     #Clase que simula un repartidor implementando Runnable.
 ┃ ┣ 📂 ui/
 ┃ ┃ ┣ 📊 Main.java		             #Punto de entrada y ejecución principal (Main.java).
 ┃ 📜 README.md
