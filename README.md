@@ -20,13 +20,15 @@ Para el desarrollo se utiliza JAVA como lenguaje de programación y se implement
 ┃ ┃ ┣ 📊 Cancelable.java		     #Interfaz para cancelar pedidos.
 ┃ ┃ ┣ 📊 Despachable.java		     #Interfaz para despachar y registrar evento
 ┃ ┃ ┣ 📊 Rastreable.java		     #Interfaz como lista que guarda los eventos realizados
+┃ ┣ 📂 gestor/
+┃ ┃ ┣ 📊 ZonaDeCarga.java		     #Gestor de pedidos con métodos sincronizados para manejar concurrencia.
 ┃ ┣ 📂 model/
 ┃ ┃ ┣ 📊 EstadoPedido.java                  #Enum con estados para los pedidos..
 ┃ ┃ ┣ 📊 Pedido.java		             #Clase abstracta base con información general para herencia y método abstracto.
 ┃ ┃ ┣ 📊 PedidoComida.java		     #Clase heredada de Pedido e implementacion de interfaces.
 ┃ ┃ ┣ 📊 PedidoEncomienda.java		     #Clase heredada de Pedido e implementacion de interfaces.
 ┃ ┃ ┣ 📊 PedidoExpress.java		     #Clase heredada de Pedido e implementacion de interfaces.
-┃ ┃ ┣ 📊 PedidoExpress.java		     #Clase que simula un repartidor implementando Runnable.
+┃ ┃ ┣ 📊 Repartidor.java		     #Clase que simula un repartidor implementando Runnable.
 ┃ ┣ 📂 ui/
 ┃ ┃ ┣ 📊 Main.java		             #Punto de entrada y ejecución principal (Main.java).
 ┃ 📜 README.md
