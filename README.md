@@ -22,6 +22,7 @@ Para el desarrollo se utiliza JAVA como lenguaje de programación y se implement
 ┃ ┃ ┣ 📊 Rastreable.java		     #Interfaz como lista que guarda los eventos realizados
 ┃ ┣ 📂 gestor/
 ┃ ┃ ┣ 📊 ZonaDeCarga.java		     #Gestor de pedidos con métodos sincronizados para manejar concurrencia.
+┃ ┃ ┣ 📊 ZonaDeCarga.java		     #Gestor de pedidos con métodos sincronizados para manejar concurrencia.
 ┃ ┣ 📂 model/
 ┃ ┃ ┣ 📊 EstadoPedido.java                  #Enum con estados para los pedidos..
 ┃ ┃ ┣ 📊 Pedido.java		             #Clase abstracta base con información general para herencia y método abstracto.

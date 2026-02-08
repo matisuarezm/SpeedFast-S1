@@ -1,10 +1,9 @@
 package cl.speedfast.ui;
 
+import cl.speedfast.gestor.EstadisticaPedidos;
 import cl.speedfast.gestor.ZonaDeCarga;
 import cl.speedfast.model.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -45,6 +44,7 @@ public class Main {
             //Thread.currentThread().interrupt();
         }
 
+        System.out.println("\n=== Total de pedidos entregados: " + EstadisticaPedidos.getPedidosTotales() + " ===");
         System.out.println("=== Sistema SpeedFast finalizado. Todas las entregas han sido procesadas. ===");
     }
 }

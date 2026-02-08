@@ -1,9 +1,7 @@
 package cl.speedfast.model;
 
+import cl.speedfast.gestor.EstadisticaPedidos;
 import cl.speedfast.gestor.ZonaDeCarga;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Repartidor implements Runnable {
 
@@ -61,6 +59,9 @@ public class Repartidor implements Runnable {
                 // Cambiar estado a ENTREGADO
                 pedido.setEstadoPedido(EstadoPedido.ENTREGADO);
                 System.out.println("[Repartidor " + nombreRepartidor + "] Ha entregado el pedido #: " + pedido.getIdPedido() + " (estado: " + pedido.getEstadoPedido() + ")");
+
+                //Incrementamos pedidos con AtomicInteger
+                EstadisticaPedidos.incrementarPedidosTotales();
 
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
