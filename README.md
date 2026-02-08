@@ -21,7 +21,7 @@ Para el desarrollo se utiliza JAVA como lenguaje de programación y se implement
 ┃ ┃ ┣ 📊 Despachable.java		     #Interfaz para despachar y registrar evento
 ┃ ┃ ┣ 📊 Rastreable.java		     #Interfaz como lista que guarda los eventos realizados
 ┃ ┣ 📂 gestor/
-┃ ┃ ┣ 📊 ZonaDeCarga.java		     #Gestor de pedidos con métodos sincronizados para manejar concurrencia.
+┃ ┃ ┣ 📊 EstadisticaPedidos.java	     #Contador atomico de pedidos entregados.
 ┃ ┃ ┣ 📊 ZonaDeCarga.java		     #Gestor de pedidos con métodos sincronizados para manejar concurrencia.
 ┃ ┣ 📂 model/
 ┃ ┃ ┣ 📊 EstadoPedido.java                  #Enum con estados para los pedidos..
